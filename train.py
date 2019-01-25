@@ -149,7 +149,7 @@ for epoch in range(args.train_epoch):
         B2A = De_A(in_B + sp_A)
         A2B = De_B(in_A + sp_B)
 
-        Dist_A_fake = Disc_A(B2A)
+        Disc_A_fake = Disc_A(B2A)
         Gen_A_fake_loss = BCE_loss(Disc_A_fake, real)
 
         Disc_B_fake = Disc_B(A2B)
